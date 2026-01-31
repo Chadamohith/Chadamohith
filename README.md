@@ -1,27 +1,70 @@
-<h1 align="center">Hi 👋, I'm Chada Mohith Reddy</h1>
-<h3 align="center">A passionate Software developer from India</h3>
+Food Delivery Data Integration and Validation Pipeline
+Project Description
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=chadamohith&label=Profile%20views&color=0e75b6&style=flat" alt="chadamohith" /> </p>
+This project implements a structured data integration pipeline for a food delivery platform. It focuses on ingesting data from multiple heterogeneous sources, validating schema integrity, merging datasets using relational keys, and exporting a clean, unified dataset for analysis and downstream processing.
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=chadamohith" alt="chadamohith" /></a> </p>
+The project demonstrates practical skills in data engineering, data preprocessing, and pipeline design using Python.
 
-- 🔭 I’m currently working on **Empowering Healthcare with Federated Learning: A Framework for Privacy and Efficiency**
+Objectives
 
-- 🌱 I’m currently learning **B.Tech(AIML)**
+Integrate data from multiple file formats and databases
 
-- 👯 I’m looking to collaborate on **Encourage Open and Honest Communication,Any startup ideas**
+Validate schema consistency before processing
 
-- 📫 How to reach me **chadamohithreddy09@gmail.com**
+Handle missing or inconsistent data safely
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/chada mohith reddy" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="chada mohith reddy" height="30" width="40" /></a>
-<a href="https://fb.com/chada mohith" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="chada mohith" height="30" width="40" /></a>
-<a href="https://instagram.com/chadamohith" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="chadamohith" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/chada mohith reddy" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="chada mohith reddy" height="30" width="40" /></a>
-</p>
+Produce a clean, merged dataset ready for analytics or machine learning
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
+Technologies Used
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=chadamohith&show_icons=true&locale=en&layout=compact" alt="chadamohith" /></p>
+Python
+
+Pandas
+
+SQLite3
+
+Jupyter Notebook
+
+Pathlib
+
+Data Sources
+Source Type	Format	Description
+Orders Data	CSV	Transaction-level order details
+Users Data	JSON	Customer profile information
+Restaurant Data	SQLite Database	Restaurant metadata
+Pipeline Workflow
+
+Load order data from a CSV file
+
+Load user data from a JSON file
+
+Retrieve restaurant data from a SQLite database
+
+Validate the presence of required columns in each dataset
+
+Handle missing values and schema inconsistencies
+
+Merge datasets using user_id and restaurant_id
+
+Export the final integrated dataset as a CSV file
+
+Key Features
+
+Modular data loading from multiple sources
+
+Schema validation to ensure data reliability
+
+Robust merging using relational identifiers
+
+Clean and structured final output
+
+Reproducible and well-documented workflow
+
+Output
+
+The pipeline generates a single consolidated dataset:
+
+food_delivery_final_output.csv
+
+
+This file contains combined order, user, and restaurant information.
