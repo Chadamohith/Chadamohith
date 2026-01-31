@@ -1,70 +1,72 @@
-Food Delivery Data Integration and Validation Pipeline
-Project Description
 
-This project implements a structured data integration pipeline for a food delivery platform. It focuses on ingesting data from multiple heterogeneous sources, validating schema integrity, merging datasets using relational keys, and exporting a clean, unified dataset for analysis and downstream processing.
 
-The project demonstrates practical skills in data engineering, data preprocessing, and pipeline design using Python.
+# Food Delivery Data analysis Pipeline
 
-Objectives
+## Overview
 
-Integrate data from multiple file formats and databases
+This project implements a data integration and validation pipeline for a food delivery platform. It ingests data from multiple heterogeneous sources, validates schema consistency, merges datasets using relational identifiers, and exports a unified dataset suitable for analytics and machine learning workflows.
 
-Validate schema consistency before processing
+---
 
-Handle missing or inconsistent data safely
+## Objectives
 
-Produce a clean, merged dataset ready for analytics or machine learning
+* Integrate data from multiple file formats and databases
+* Ensure schema validation and data consistency
+* Handle missing or inconsistent data safely
+* Generate a clean, consolidated dataset for downstream use
 
-Technologies Used
+---
 
-Python
+## Technology Stack
 
-Pandas
+* Python
+* Pandas
+* SQLite3
+* Jupyter Notebook
 
-SQLite3
+---
 
-Jupyter Notebook
+## Data Sources
 
-Pathlib
+| Data        | Format          | Description                  |
+| ----------- | --------------- | ---------------------------- |
+| Orders      | CSV             | Order transaction details    |
+| Users       | JSON            | Customer profile information |
+| Restaurants | SQLite Database | Restaurant metadata          |
 
-Data Sources
-Source Type	Format	Description
-Orders Data	CSV	Transaction-level order details
-Users Data	JSON	Customer profile information
-Restaurant Data	SQLite Database	Restaurant metadata
-Pipeline Workflow
+---
 
-Load order data from a CSV file
+## Workflow
 
-Load user data from a JSON file
+1. Load order data from CSV
+2. Load user data from JSON
+3. Retrieve restaurant data from SQLite database
+4. Validate required columns in each dataset
+5. Handle missing values and inconsistencies
+6. Merge datasets using `user_id` and `restaurant_id`
+7. Export the final integrated dataset
 
-Retrieve restaurant data from a SQLite database
+---
 
-Validate the presence of required columns in each dataset
+## Features
 
-Handle missing values and schema inconsistencies
+* Multi-source data ingestion
+* Schema validation before merging
+* Reliable relational joins
+* Clean and structured output
+* Reproducible pipeline design
 
-Merge datasets using user_id and restaurant_id
+---
 
-Export the final integrated dataset as a CSV file
+## Output
 
-Key Features
+The pipeline generates the following file:
 
-Modular data loading from multiple sources
-
-Schema validation to ensure data reliability
-
-Robust merging using relational identifiers
-
-Clean and structured final output
-
-Reproducible and well-documented workflow
-
-Output
-
-The pipeline generates a single consolidated dataset:
-
+```
 food_delivery_final_output.csv
+```
 
+This dataset contains merged order, user, and restaurant information.
 
-This file contains combined order, user, and restaurant information.
+---
+
